@@ -1,0 +1,8 @@
+metric,value
+total_records,1919.0
+unique_underlyings,395.0
+unique_expiries,5.0
+total_volume,124509386.0
+call_options,958.0
+put_options,961.0
+data_quality_score,0.9578773666840368

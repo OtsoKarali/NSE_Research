@@ -1,0 +1,12 @@
+{
+  "year": 2024,
+  "symbols": [
+    "NIFTY",
+    "BANKNIFTY"
+  ],
+  "total_records": 1215,
+  "symbol_records": {
+    "NIFTY": 1166,
+    "BANKNIFTY": 49
+  }
+}

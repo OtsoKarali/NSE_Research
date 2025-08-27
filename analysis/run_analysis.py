@@ -35,7 +35,7 @@ def main():
     
     try:
         # Load configuration
-        config_path = Path(__file__).parent / 'config.yaml'
+        config_path = Path(__file__).parent.parent / 'config.yaml'
         with open(config_path, 'r') as file:
             config = yaml.safe_load(file)
         

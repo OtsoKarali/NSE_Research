@@ -2,7 +2,7 @@
 
 # Data sources
 data:
-  options_file: "options_data/op260825.csv"
+  options_file: "../options_data/op260825.csv"
   instruments_file: null  # Will be inferred from data
   calendar_file: null     # Will be inferred from data
 
