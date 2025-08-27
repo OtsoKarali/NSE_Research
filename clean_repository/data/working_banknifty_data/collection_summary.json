@@ -1,0 +1,9 @@
+{
+  "symbol": "BANKNIFTY",
+  "working_period": "Dec 2023 - Mar 2024",
+  "total_records": 426,
+  "successful_months": 4,
+  "failed_months": 0,
+  "date_range": "2023-11-28 00:00:00 to 2024-02-29 00:00:00",
+  "output_directory": "working_banknifty_data"
+}
