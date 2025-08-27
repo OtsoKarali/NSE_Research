@@ -1,0 +1,58 @@
+# NSE Options Analysis Configuration
+
+# Data sources
+data:
+  options_file: "options_data/op260825.csv"
+  instruments_file: null  # Will be inferred from data
+  calendar_file: null     # Will be inferred from data
+
+# Analysis parameters
+analysis:
+  # Random seed for reproducibility
+  random_seed: 42
+  
+  # Time horizons for analysis
+  time_horizons: [1, 5, 60, 300]  # seconds
+  
+  # Liquidity thresholds
+  liquidity:
+    min_volume: 1000
+    min_turnover: 1000000  # 1M INR
+    max_spread_bps: 100    # 1%
+  
+  # Volatility analysis
+  volatility:
+    moneyness_levels: [0.8, 0.9, 0.95, 1.0, 1.05, 1.1, 1.2]
+    delta_levels: [10, 25, 50, 75, 90]
+    min_iv: 0.05
+    max_iv: 2.0
+  
+  # Event study parameters
+  events:
+    expiry_window: [-3, 1]  # days around expiry
+    regulatory_window: [-30, 30]  # days around regulatory changes
+    jane_street_ban_date: "2024-01-01"  # Placeholder date
+  
+  # Market making simulation
+  market_making:
+    quote_widths: [1, 2, 3, 5, 10]  # ticks
+    inventory_caps: [100, 500, 1000, 5000]  # contracts
+    latency_shifts: [0, 100, 500]  # microseconds
+
+# Fee structure (INR per contract)
+fees:
+  exchange: 0.05
+  clearing: 0.02
+  stamp_duty: 0.0001
+  brokerage: 0.0005  # 5 bps
+  stt_options: 0.0005  # 5 bps on premium
+  stt_futures: 0.0001  # 1 bps on turnover
+  data_cost_per_msg: 0.001
+  infra_cost_per_msg: 0.0005
+
+# Output settings
+output:
+  figures_dpi: 300
+  save_format: "png"
+  output_dir: "outputs"
+  figures_dir: "figures"
